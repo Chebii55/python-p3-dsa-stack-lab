@@ -36,9 +36,7 @@ class Stack:
 
     def search(self, target):
         if target in self.items:
-            target_index=self.items.index(target)
-            last_value=self.items[-1]
-            how_far=self.items.index(last_value)-target_index
+            how_far=self.items.index(self.items[-1])-self.items.index(target)
             return how_far
         else:
             return -1
